@@ -31,6 +31,16 @@ const renderPallete = () => {
     schemeBtn.disabled = true
 }
 
+// Copy text to the clipboard
+const copyColorsCode = () => {
+    let colorCode = colorFooter.getElementsByTagName('p')
+    for(let i = 0; i < colorCode.length; i++){
+        colorCode[i].addEventListener('click', (e) => {
+            navigator.clipboard.writeText(colorCode[i].textContent)
+        })
+    }
+}
+ 
 
 let colorPallete = []
 colorForm.addEventListener('submit', e =>{
@@ -49,5 +59,6 @@ colorForm.addEventListener('submit', e =>{
             colorPallete = []
             activeGetSchemeBtn(colorInput)
             activeGetSchemeBtn(schemeList)
+            copyColorsCode()
         })   
 })
