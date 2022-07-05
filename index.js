@@ -1,4 +1,3 @@
-import {renderPallete, copyColorsCode} from './utils.js'
 
 const colorForm = document.getElementById('color-form')
 const colorInput = document.getElementById('color-input')
