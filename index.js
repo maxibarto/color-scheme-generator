@@ -13,7 +13,6 @@ const activeGetSchemeBtn = (e) => {
     })
 }
 
-let colorPallete = []
 colorForm.addEventListener('submit', e =>{
     e.preventDefault()
     let colorActual = colorInput.value

@@ -1,6 +1,7 @@
 
 const colorContainer = document.getElementById('color-container')
 const colorFooter = document.getElementById('color-footer')
+let colorPallete = []
 
 // Render the pallete of colors
 const renderPallete = () => {
