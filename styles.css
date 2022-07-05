@@ -80,9 +80,24 @@ body{
     cursor: pointer;
     margin: 0;
     padding: 16px 0;
+    position: relative;
 }
 
 #color-footer p:active{
-    background-color: red;
-    content: 'copied!';
+    background-color: rgb(223, 223, 223);
+}
+
+#color-footer p span{
+    position: absolute;
+    visibility: hidden;
+    top: -13px;
+    display: inline-block;
+    background: black;
+    color: darkgray;
+    width: 120px;
+    font-size: 10px;
+    border-radius: 3px;
+    right: 50%;
+    transform: translateX(50%);
+    transition: all 1s;
 }

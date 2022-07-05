@@ -23,7 +23,7 @@ const renderPallete = () => {
             <div style="background-color:${color}"></div>
         `
         footerHtml += `
-            <p>${color}</p>
+            <p>${color}<span>${color} copied to Clipboard!</span></p>
         `
     }
     colorContainer.innerHTML = palleteHtml
@@ -34,9 +34,14 @@ const renderPallete = () => {
 // Copy text to the clipboard
 const copyColorsCode = () => {
     let colorCode = colorFooter.getElementsByTagName('p')
+    let colorCopied = colorFooter.getElementsByTagName('span')
     for(let i = 0; i < colorCode.length; i++){
-        colorCode[i].addEventListener('click', (e) => {
+        colorCode[i].addEventListener('click', () => {
             navigator.clipboard.writeText(colorCode[i].textContent)
+            colorCopied[i].style.visibility = 'visible'
+            setTimeout(() => {
+                colorCopied[i].style.visibility = 'hidden'
+            }, 1000)
         })
     }
 }
