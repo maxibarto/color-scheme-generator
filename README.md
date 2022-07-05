@@ -16,11 +16,11 @@ I've learned:
 
 ###### Part 2
 - HTTP requests
--- URL's endpoints
--- Methods
--- Body
--- Headers
+  - URL's endpoints
+  - Methods
+  - Body
+  - Headers
 - REST APIs
--- Resources
--- Parameters
--- Queries
+  - Resources
+  - Parameters
+  - Queries
