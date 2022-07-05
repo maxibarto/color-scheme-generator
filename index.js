@@ -1,4 +1,4 @@
-export {renderPallete, copyColorsCode} from './utils.js'
+import {renderPallete, copyColorsCode} from './utils.js'
 
 const colorForm = document.getElementById('color-form')
 const colorInput = document.getElementById('color-input')
@@ -6,7 +6,7 @@ const schemeList = document.getElementById('scheme-list')
 const schemeBtn = document.getElementById('scheme-btn')
 
 
-// Active the button to get the color from the API
+// Active the button that gets the color from the API
 const activeGetSchemeBtn = (e) => {
     e.addEventListener('click',() => {
         schemeBtn.disabled = false
